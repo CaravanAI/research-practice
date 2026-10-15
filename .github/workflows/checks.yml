@@ -42,3 +42,26 @@ jobs:
             exit 1
           fi
           echo "No company files found."
+
+  only-your-own-files:
+    name: Only your own files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check this pull request changes only cards and plugins
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git diff --name-only "$BASE_SHA...$HEAD_SHA" > changed.txt
+          bad=$(grep -E '^\.claude-plugin/marketplace\.json$|^docs/' changed.txt || true)
+          if [ -n "$bad" ]; then
+            echo "These files are rebuilt automatically after a merge, so a pull request must not change them:"
+            echo "$bad" | sed 's/^/  - /'
+            echo ""
+            echo "Undo them with: git checkout origin/main -- .claude-plugin/marketplace.json  (and remove any docs/ files), then push again."
+            exit 1
+          fi
+          echo "Only cards and plugins changed."

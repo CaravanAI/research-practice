@@ -11,3 +11,6 @@ __pycache__/
 
 # Local scratch
 .vscode/
+
+# The board page is built on GitHub after each merge (and locally for a preview)
+docs/

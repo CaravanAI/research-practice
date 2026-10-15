@@ -1,8 +1,9 @@
 name: Build board and marketplace
 
-# Runs after every merge to main. It rebuilds the board page and the
-# marketplace list from the card files and plugin folders, saves them back
-# if they changed, then publishes the board to GitHub Pages.
+# Runs after every merge to main. It rebuilds the marketplace list from the
+# plugin folders and saves it back if it changed, then builds the board page
+# from the card files and publishes it to GitHub Pages. The board page is
+# never committed, so pull requests only ever touch their own card or plugin.
 # (Pages only works once the repo is public.)
 
 on:
@@ -39,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs .claude-plugin/marketplace.json
+          git add .claude-plugin/marketplace.json
           if git diff --cached --quiet; then
             echo "Nothing changed."
           else
