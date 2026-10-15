@@ -9,11 +9,6 @@
       "name": "example-red-flags",
       "source": "./plugins/example-red-flags",
       "description": "Reads an annual report from a folder you name and lists warning signs, each with file and page and a Sourced, Inferred or Not in the sources label."
-    },
-    {
-      "name": "lydia-red-flags",
-      "source": "./plugins/lydia-red-flags",
-      "description": "It reads an annual report and lists the red flags by severity, each with the page it comes from."
     }
   ]
 }
