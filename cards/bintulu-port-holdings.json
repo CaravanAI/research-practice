@@ -4,12 +4,12 @@
   "sector": "Ports",
   "stage": "Researching",
   "key_number": {
-    "label": "Listed on Bursa Malaysia",
-    "value": "16 April 2001"
+    "label": "Dividends declared, FY2025",
+    "value": "15 sen per share"
   },
   "source": {
-    "document": "Practice card, check against the annual report",
-    "page": "not checked"
+    "document": "Annual report 2025",
+    "page": "203"
   },
   "owner": "Example"
 }
