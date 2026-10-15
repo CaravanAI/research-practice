@@ -1,0 +1,8 @@
+{
+  "name": "lydia-red-flags",
+  "version": "1.0.0",
+  "description": "It reads an annual report and lists the red flags by severity, each with the page it comes from.",
+  "author": {
+    "name": "Lydia So"
+  }
+}
