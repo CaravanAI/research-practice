@@ -1,6 +1,6 @@
 {
   "name": "example-red-flags",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Reads an annual report from a folder you name and lists warning signs, each with file and page and a Sourced, Inferred or Not in the sources label.",
   "author": {
     "name": "Caravan"
