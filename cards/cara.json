@@ -1,14 +1,14 @@
 {
-  "name": "Bintulu Port Holdings Berhad",
-  "country": "Malaysia",
-  "sector": "Ports",
-  "stage": "Idea",
+  "name": "民都鲁港口控股有限公司",
+  "country": "马来西亚",
+  "sector": "港口",
+  "stage": "Group presentation",
   "key_number": {
-    "label": "Profit before tax, FY2025",
-    "value": "RM161.3 million"
+    "label": "税前利润，2025财年",
+    "value": "1.613亿令吉"
   },
   "source": {
-    "document": "Annual report 2025",
+    "document": "2025年年报",
     "page": "208"
   },
   "owner": "Cara"
