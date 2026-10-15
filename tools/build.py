@@ -29,7 +29,7 @@ BOARD_FILE = ROOT / "docs" / "index.html"
 MARKETPLACE_FILE = ROOT / ".claude-plugin" / "marketplace.json"
 
 STAGES = ["Idea", "Researching", "Group presentation", "Decision"]
-MARKETPLACE_NAME = "seafarer-practice"
+MARKETPLACE_NAME = "research-practice"
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 
@@ -161,7 +161,7 @@ def load_plugins():
 def build_marketplace(plugins):
     return {
         "name": MARKETPLACE_NAME,
-        "description": "Practice agents and skills from the Seafarer training",
+        "description": "Practice research agents and skills",
         "owner": {"name": "Caravan"},
         "plugins": [
             {
@@ -249,7 +249,7 @@ PAGE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Seafarer research board (practice)</title>
+<title>Research board (practice)</title>
 <style>
   :root {{
     --paper: #F0EEE0;
@@ -352,7 +352,7 @@ PAGE = """<!doctype html>
 </head>
 <body>
 <header>
-  <h1>Seafarer research board &middot; practice</h1>
+  <h1>Research board &middot; practice</h1>
   <div class="stats"><span>{count} {noun}</span><span>Last updated {updated}</span></div>
 </header>
 <main>

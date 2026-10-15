@@ -1,4 +1,4 @@
-# Seafarer practice repo
+# Research practice repo
 
 A small repo for practicing GitHub with Claude Code. You never type git commands. You tell Claude what you want, and Claude does the git steps.
 
@@ -18,8 +18,8 @@ Each folder in `plugins/` is a Claude Code plugin: a small package holding agent
 
 To use it, start Claude Code and run:
 
-    /plugin marketplace add CaravanAI/seafarer-practice
-    /plugin install example-red-flags@seafarer-practice
+    /plugin marketplace add CaravanAI/research-practice
+    /plugin install example-red-flags@research-practice
 
 ## How your work gets in
 
