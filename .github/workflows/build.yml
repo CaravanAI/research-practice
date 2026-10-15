@@ -48,14 +48,19 @@ jobs:
             git push origin HEAD:main
           fi
 
+      # The Pages steps only run once the repo is public. While it is
+      # private they are skipped, so a merge does not show a red failure.
       - uses: actions/configure-pages@v5
+        if: ${{ !github.event.repository.private }}
 
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ !github.event.repository.private }}
         with:
           path: docs
 
   deploy:
     needs: build
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
