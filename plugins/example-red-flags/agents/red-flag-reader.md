@@ -40,4 +40,4 @@ Give a numbered list. For each warning sign write:
 - Every item needs a file and a page. If you cannot give a page, label it Not in the sources.
 - Never mix up Sourced and Inferred. If you are not sure, label it Inferred.
 - No buy, sell or hold views. No price targets. Describe what the document says, not what the stock will do.
-- End with one line listing the files you read and any you could not read.
+- End with one line listing the files you read and any you could not read. (NOBUMP-TEST-MARKER)
