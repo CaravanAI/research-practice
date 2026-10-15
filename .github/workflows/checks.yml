@@ -1,0 +1,44 @@
+name: Checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  card-and-plugin-check:
+    name: Card and plugin check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check every card and plugin
+        run: python tools/build.py --check
+
+  no-company-files:
+    name: No company files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Look for company files in this pull request
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Files this pull request adds, copies, changes or renames.
+          git diff --name-only --diff-filter=ACMR "$BASE_SHA...$HEAD_SHA" > changed.txt
+          bad=$(grep -iE '\.(pdf|xlsx|xls|docx|doc|csv|zip)$|^companies/' changed.txt || true)
+          if [ -n "$bad" ]; then
+            echo "These files are not allowed in this repo:"
+            echo "$bad" | sed 's/^/  - /'
+            echo ""
+            echo "Company documents (PDF, Excel, Word, CSV, zip) and the companies/ folder stay on your own computer."
+            echo "Remove them from your pull request and push again."
+            exit 1
+          fi
+          echo "No company files found."

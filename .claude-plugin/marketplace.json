@@ -1,0 +1,14 @@
+{
+  "name": "seafarer-practice",
+  "description": "Practice agents and skills from the Seafarer training",
+  "owner": {
+    "name": "Caravan"
+  },
+  "plugins": [
+    {
+      "name": "example-red-flags",
+      "source": "./plugins/example-red-flags",
+      "description": "Reads an annual report from a folder you name and lists warning signs, each with file and page and a Sourced, Inferred or Not in the sources label."
+    }
+  ]
+}

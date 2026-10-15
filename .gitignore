@@ -1,0 +1,13 @@
+# Operating system clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Local scratch
+.vscode/
