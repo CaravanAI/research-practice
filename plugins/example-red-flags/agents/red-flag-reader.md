@@ -26,7 +26,7 @@ Look for warning signs a researcher would want to question. Examples:
 
 ## How to report
 
-Give a numbered list. For each warning sign write:
+Give a numbered list ranked by severity, worst first: High (could threaten the company's ability to operate or pay its dividend), then Medium (needs a question to management), then Low (worth a note). Show the severity on each item. For each warning sign write:
 
 1. A one-line plain description.
 2. **File and page** where it appears, for example "annual-report-2024.pdf, page 87".
