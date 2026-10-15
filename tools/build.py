@@ -28,7 +28,8 @@ PLUGINS_DIR = ROOT / "plugins"
 BOARD_FILE = ROOT / "docs" / "index.html"
 MARKETPLACE_FILE = ROOT / ".claude-plugin" / "marketplace.json"
 
-STAGES = ["Idea", "Researching", "Group presentation", "Decision"]
+STAGES = ["Idea", "Researching", "Group presentation",
+          "Is Andrew Happy With This Idea?  Better Check With Andrew, Pronto!", "Decision"]
 MARKETPLACE_NAME = "research-practice"
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
@@ -282,7 +283,7 @@ PAGE = """<!doctype html>
   .stats span + span {{ margin-left: 28px; }}
   main {{
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 20px;
     padding: 20px 32px 32px;
     align-items: start;
