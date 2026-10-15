@@ -213,8 +213,10 @@ def render_card(card):
         )
     kn = card["key_number"]
     src = card["source"]
+    # Brandon's card is gold.
+    style = ' style="background: #F2D57E"' if card["owner"] == "Brandon" else ""
     return (
-        f'<article class="card{" is-flagged" if flagged else ""}">'
+        f'<article class="card{" is-flagged" if flagged else ""}"{style}>'
         f"{banner}"
         f'<h3>{esc(card["name"])}</h3>'
         f'<p class="meta">{esc(card["country"])} &middot; {esc(card["sector"])}</p>'
