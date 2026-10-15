@@ -1,14 +1,14 @@
 {
   "name": "Bintulu Port Holdings Berhad",
   "country": "Malaysia",
-  "sector": "Ports",
+  "sector": "Pelabuhan",
   "stage": "Researching",
   "key_number": {
-    "label": "Group profit before tax, FY2025",
-    "value": "RM161.3 million"
+    "label": "Untung sebelum cukai kumpulan, TK2025",
+    "value": "RM161.3 juta"
   },
   "source": {
-    "document": "Annual report 2025",
+    "document": "Laporan tahunan 2025",
     "page": "208"
   },
   "owner": "Adam"
